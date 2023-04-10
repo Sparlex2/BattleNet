@@ -1,0 +1,10 @@
+^D:\C++\BATTLENET\CREATE\CMAKEFILES\7215AB357D06D6E357CAFA9C92C4461D\GENERATE.STAMP.RULE
+setlocal
+D:\CMake\bin\cmake.exe -SD:/c++/BattleNet -BD:/c++/BattleNet/create --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/c++/BattleNet/create/BatlleNet.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
